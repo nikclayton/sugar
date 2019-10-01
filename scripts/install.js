@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const fse = require('fs-extra');
 
-if (process.env.PWD.match(/node_modules/)) {
+if (process.cwd().match(/node_modules/)) {
 	// move sources
 	fse.removeSync('sass');
 	fse.moveSync('src/sass','sass');
